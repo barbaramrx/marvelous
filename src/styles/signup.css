@@ -1,0 +1,179 @@
+.signup-superior {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 2rem;
+    text-align: end;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.signup-superior h2 {
+    padding-bottom: 0;
+}
+
+.spider-call {
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 150px;
+    width: 150px;
+}
+
+.signup-wrap {
+    background-color: #ffffff;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    width: 100%;
+}
+
+.signup-form-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.signup-form input,
+.signup-form button {
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 5px;
+}
+
+.signup-name,
+.signup-email,
+.signup-password {
+    margin-bottom: 2rem;
+    transition: ease-in-out 0.3s;
+    border: none;
+    width: 100%;
+    background-color: #F3F3F3;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.signup-name::placeholder,
+.signup-email::placeholder,
+.signup-password::placeholder {
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    color: #ED1D24;
+}
+
+.signup-name:hover,
+.signup-email:hover,
+.signup-password:hover,
+.signup-name:focus,
+.signup-email:focus,
+.signup-password:focus {
+    transition: ease-in-out 0.3s;
+    background-color: #d4d2d2;
+}
+
+.signup-name:focus::placeholder,
+.signup-email:focus::placeholder,
+.signup-password:focus::placeholder {
+    transition: ease-in-out 0.3s;
+    letter-spacing: 5px;
+}
+
+.btn-signup {
+    transition: ease-in-out 0.4s;
+    margin-top: 1rem;
+    width: 50%;
+    padding: 6px;
+    background-color: #ED1D24;
+    border: 1px solid transparent;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.btn-signup:hover {
+    transition: ease-in-out 0.4s;
+    background-color: transparent;
+    color: #ED1D24;
+    border: 1px solid #ED1D24;   
+    letter-spacing: 2px;
+}
+
+.signup-form-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 6rem;
+    text-align: left;
+}
+
+.signup-form-right h2 {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.profile-selector {
+    margin-top: 3rem;
+}
+
+.profile-selector input {
+    margin:0;
+    padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.profile-captain-marvel {
+    background-image: url('../assets/img/cptmarvel_70x70.png');
+}
+
+.profile-black-panther {
+    background-image: url('../assets/img/blackpanther_70x70.png');
+}
+
+.profile-dark-phoenix {
+    background-image: url('../assets/img/darkphoenix_70x70.png');
+}
+
+.profile-iron-man {
+    background-image: url('../assets/img/ironman_70x70.png');
+}
+
+.profile-pic {
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    -webkit-transition: ease-in-out 0.4s;
+    -moz-transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.4s;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+    filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.profile-pic:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.profile-selector input:active +.profile-pic{opacity: .9;}
+.profile-selector input:checked +.profile-pic{
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}

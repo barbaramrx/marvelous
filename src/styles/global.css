@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    padding: 100px 60px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/** BACKGROUND **/
+html { 
+    background: url('../assets/img/comics-background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+/** FIM BACKGROUND **/
+
+/** CLASSES GENERALIZADAS E REUTILIZÁVEIS **/
+h2 {
+    font-size: 48px;
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #2D2D2D;
+}
+
+.title-red {
+    color: #ED1D24;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+/** FIM CLASSES GENERALIZADAS E REUTILIZÁVEIS **/

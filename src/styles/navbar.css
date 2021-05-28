@@ -1,0 +1,31 @@
+/** HEADER **/
+header {
+    background-color: #ED1D24;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 -4px 5px rgb(0 0 0 / 33%);
+}
+
+.logo {
+    width: 70%;
+}
+
+.btn-entrar {
+    transition: ease-in-out 0.4s;
+    padding: 6px 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #ED1D24;
+    border: 1px solid transparent;
+    font-size: 24px;
+}
+
+.btn-entrar:hover {
+    transition: ease-in-out 0.4s;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;   
+}
+/** FIM HEADER **/

@@ -1,0 +1,88 @@
+.login-wrap {
+    background-color: #ffffff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    border: none;
+}
+
+.login-form input,
+.login-form button {
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    border-radius: 5px;
+}
+
+.login-email,
+.login-password {
+    transition: ease-in-out 0.3s;
+    border: none;
+    width: 100%;
+    background-color: #F3F3F3;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.login-email::placeholder,
+.login-password::placeholder {
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    color: #ED1D24;
+}
+
+.login-email:hover,
+.login-password:hover,
+.login-email:focus,
+.login-password:focus {
+    transition: ease-in-out 0.3s;
+    background-color: #d4d2d2;
+}
+
+.login-email:focus::placeholder,
+.login-password:focus::placeholder {
+    transition: ease-in-out 0.3s;
+    letter-spacing: 5px;
+}
+
+.btn-login {
+    transition: ease-in-out 0.4s;
+    margin-top: 1rem;
+    width: 50%;
+    padding: 6px;
+    background-color: #ED1D24;
+    border: 1px solid transparent;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.btn-login:hover {
+    transition: ease-in-out 0.4s;
+    background-color: transparent;
+    color: #ED1D24;
+    border: 1px solid #ED1D24;   
+    letter-spacing: 2px;
+}
+
+.login-cadastro {
+    margin-top: 2rem;
+}
+
+.login-join {
+    color: #ED1D24;
+}
+
+.login-join:hover {
+    font-weight: bolder;
+}
