@@ -79,7 +79,7 @@ class Signup extends React.Component{
         return(
             <div className="main">
                 <Navbar>
-                    <a className="btn btn-entrar font-bebas" href="#/login">Entrar</a>
+                    <a className="btn btn-entrar font-bebas" href="#/">Entrar</a>
                 </Navbar>
                 <div className="wrapper">
                     <SpiderComm>

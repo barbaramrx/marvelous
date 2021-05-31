@@ -7,7 +7,7 @@ import UserService from '../app/service/userservice.js'
 
 import '../styles/signup.css'
 
-import {errorMsg, successMsg} from '../components/toastr.js'
+import { successMsg} from '../components/toastr.js'
 import LoggedProfile from '../components/loggedprofile.js'
 
 class Profile extends React.Component{
@@ -40,7 +40,7 @@ class Profile extends React.Component{
         })
     }
 
-    update = () => {
+    update = async () => {
 
         const id = this.state.id
 
@@ -51,19 +51,40 @@ class Profile extends React.Component{
             profile: this.state.profile
         }
 
+        if (!user.name) {
+            user.name = localStorage.getItem('token_name')
+        } else if (!user.email) {
+            user.email = localStorage.getItem('token_email')
+        } else if (!user.password) {
+            user.password = localStorage.getItem('token_password')
+        } else if(!user.profile) {
+            user.profile = localStorage.getItem('token_profile')
+        }
+
         this.service.update(id, user)
             .then(response => {
                 localStorage.setItem('token', JSON.stringify(response.data))
 
-                const gettingUpdatedUser = localStorage.getItem('logged_user')
-                const updatedUser = JSON.parse(gettingUpdatedUser)
-
-                this.updateInfo(updatedUser)
+                this.updateLocalStorage(response.data)
 
                 successMsg('Usuário alterado com sucesso! Atualize a página.')
             }).catch(err => {
-                errorMsg(err.response.data)
+                console.log(err.response)
             })
+    }
+
+    updateLocalStorage = (object) => {
+        localStorage.setItem('original_token', JSON.stringify(object))
+        const gettingLoggedUser = localStorage.getItem('original_token')
+        const loggedUser = JSON.parse(gettingLoggedUser)
+        localStorage.setItem('token', loggedUser)
+        localStorage.setItem('token_id', loggedUser.userId)
+        localStorage.setItem('token_name', loggedUser.name)
+        localStorage.setItem('token_email', loggedUser.email)
+        localStorage.setItem('token_profile', loggedUser.profile)
+        localStorage.setItem('token_password', loggedUser.password)
+
+        this.updateInfo(loggedUser)
     }
     
 

@@ -13,7 +13,8 @@ class Star extends React.Component{
 
     state = {
         style: '',
-        favs: []
+        favs: [],
+        isFav: 'false'
     }
 
     constructor() {
@@ -43,9 +44,9 @@ class Star extends React.Component{
         this.userCharService.checkFav(userId)
             .then(response => {
                 this.setState({
-                    favs: response.data
+                    favs: response.data,
                 })
-
+                
                 this.findFavorite()
             }).catch(err => {
                 console.log(err.response)
@@ -72,11 +73,12 @@ class Star extends React.Component{
 
             if (idFav === idProps) {
                 this.setState({
-                    style: '#FFD700'
+                    style: '#FFD700',
+                    isFav: 'true'
                 })
             } else {
                 this.setState({
-                    style: '#black'
+                    isFav: 'false'
                 })
             }
         });
@@ -91,29 +93,36 @@ class Star extends React.Component{
             name: this.props.name
         }
 
-
         if(parent === "character") {
 
             this.userCharService.save(userId, fav)
-            .then(response => {
-                e.target.style.color = "#FFD700"
-                successMsg('Você favoritou o personagem!')
-            }).catch(err => {
-                console.log(err.response)
-            })
-            
+                .then(response => {
+
+                    e.target.style.color = "#FFD700"
+                    successMsg('Você favoritou o personagem!')
+                    this.setState({
+                        isFav: 'true'
+                    })
+
+                }).catch(err => {
+                    console.log(err.response)
+                })
+                
         } else {
-
+    
             this.userComicService.save(userId, fav)
-            .then(response => {
-                e.target.style.color = "#FFD700"
-                successMsg('Você favoritou a comic!')
-            }).catch(err => {
-                errorMsg('Esta comic já está na sua lista de favoritos.')
-            })
-            
-        }
+                .then(response => {
 
+                    e.target.style.color = "#FFD700"
+                    successMsg('Você favoritou a comic!')
+                    this.setState({
+                        isFav: 'true'
+                    })
+
+                }).catch(err => {
+                    errorMsg('Esta comic já está na sua lista de favoritos.')
+                })
+        }
     }
 
     render() {

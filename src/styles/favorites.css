@@ -29,11 +29,13 @@
     list-style-type: none;
     font-size: 18px;
     font-family: 'Bai Jamjuree', sans-serif;
-    width: fit-content;
 }
 
-.fav-char-list:hover,
-.fav-comic-list:hover {
+.fav-item {
+    margin-bottom: 12px;
+}
+
+.fav-item:hover {
     cursor: pointer;
     font-weight: bolder;
     color: #ED1D24;

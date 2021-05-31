@@ -3,12 +3,12 @@ import {withRouter} from 'react-router-dom'
 
 import Navbar from '../components/navbar.js'
 import LoggedProfile from '../components/loggedprofile.js';
+import UserComicService from '../app/service/usercomicservice.js';
+import UserCharService from '../app/service/usercharservice.js';
 
 import '../styles/lists.css'
 import '../styles/filter.css'
 import '../styles/favorites.css'
-import UserComicService from '../app/service/usercomicservice.js';
-import UserCharService from '../app/service/usercharservice.js';
 
 class Favorites extends React.Component {
 
@@ -39,7 +39,6 @@ class Favorites extends React.Component {
 
 
     getFavChars = (userId) => {
-
         this.userCharService.checkFav(userId)
             .then(response => {
                 this.setState({
@@ -51,7 +50,6 @@ class Favorites extends React.Component {
     }
 
     getFavComics = (userId) => {
-
         this.userComicService.checkFav(userId)
             .then(response => {
                 this.setState({
@@ -80,27 +78,31 @@ class Favorites extends React.Component {
                 <div className="wrapper wrapper-fav">
                     <div className="fav-chars">
                         <h2 className="title-red bebas-neue">Fav Characters</h2>
-                        {this.state.favChars.map(char => {
-                            return(
-                                <ul className="fav-char-list" key="char.id">
-                                    <li onClick={() => this.props.history.push({pathname: `/character/${char.id}`, state:{charId: char.id}})}>
-                                        {char.name}
-                                    </li>
-                                </ul>
-                            )
-                        })}
+                        <ul className="fav-char-list">
+                            {this.state.favChars.map(char => {
+                                return(
+                                    <>
+                                        <li className="fav-item" key="char.id" onClick={() => this.props.history.push({pathname: `/character/${char.id}`, state:{charId: char.id}})}>
+                                            {char.name}
+                                        </li>
+                                    </>
+                                )
+                            })}
+                        </ul>
                     </div>
                     <div className="fav-comics">
                         <h2 className="title-red bebas-neue">Fav Comics</h2>
-                        {this.state.favComics.map(comic => {
-                            return(
-                                <ul className="fav-comic-list" key="comic.id">
-                                    <li onClick={() => this.props.history.push({pathname: `/comic/${comic.id}`, state:{comicId: comic.id}})}>
-                                        {comic.name}
-                                    </li>
-                                </ul>
-                            )
-                        })}
+                        <ul className="fav-comic-list">
+                            {this.state.favComics.map(comic => {
+                                return(
+                                    <>
+                                        <li className="fav-item" key="comic.id" onClick={() => this.props.history.push({pathname: `/comic/${comic.id}`, state:{comicId: comic.id}})}>
+                                            {comic.name}
+                                        </li>
+                                    </>
+                                )
+                            })}
+                        </ul>
                     </div>
                 </div>
             </div>

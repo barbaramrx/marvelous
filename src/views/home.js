@@ -48,12 +48,10 @@ class Home extends React.Component {
                     </SpiderComm>
                     <div className="comics-chars">
                         <div className="home-comics">
-                            <h1 className="title-red bebas-neue">Comics</h1>
-                            <button onClick={this.goToComics}>Teste</button>
+                            <button className="home-btn" onClick={this.goToComics}>Comics</button>
                         </div>
                         <div className="home-characters">
-                            <h1 className="title-red bebas-neue">Characters</h1>
-                            <button onClick={this.goToChars}>Teste</button>
+                            <button className="home-btn" onClick={this.goToChars}>Characters</button>
                         </div>
                     </div>
                 </div>

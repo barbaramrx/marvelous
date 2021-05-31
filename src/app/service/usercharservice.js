@@ -3,16 +3,17 @@ import ApiService from '../apiservice.js'
 class UserCharService extends ApiService {
 
     constructor() {
-        super('/char')
+        super('/char/')
     }
 
     save(id, char) {
-        return this.post(`/${id}/save`, char)
+        return this.post(`${id}/save`, char)
     }
 
     checkFav(id) {
-        return this.get(`/${id}/favCharacters`)
+        return this.get(`${id}/favCharacters`)
     }
+
 }
 
 export default UserCharService

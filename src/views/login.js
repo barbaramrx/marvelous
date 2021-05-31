@@ -21,10 +21,6 @@ class Login extends React.Component{
         this.service = new UserService();
     }
 
-    componentDidMount() {
-        localStorage.clear()
-    }
-
     login = () => {
         this.service.auth({
             email: this.state.email,
@@ -45,7 +41,9 @@ class Login extends React.Component{
         localStorage.setItem('token', loggedUser)
         localStorage.setItem('token_id', loggedUser.userId)
         localStorage.setItem('token_name', loggedUser.name)
+        localStorage.setItem('token_email', loggedUser.email)
         localStorage.setItem('token_profile', loggedUser.profile)
+        localStorage.setItem('token_password', loggedUser.password)
     }
 
     render(){
