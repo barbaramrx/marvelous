@@ -1,0 +1,25 @@
+.filter {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background: linear-gradient(269.97deg, rgba(237, 29, 36, 0.65) -12.65%, #ED1D24 99.98%);
+    box-shadow: 0px 0px 4px #ED1D24;
+}
+
+.filter-input,
+.filter-search {
+    padding: 10px;
+    border: none;
+    background-color: inherit;
+    color: #ffffff;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.filter-input::placeholder {
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #ffffff;
+}
+
+.filter-search {
+    cursor: pointer;
+}

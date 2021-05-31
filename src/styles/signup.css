@@ -1,26 +1,3 @@
-.signup-superior {
-    margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 1fr auto;
-    grid-column-gap: 2rem;
-    text-align: end;
-    width: 50%;
-    border-radius: 5px;
-}
-
-.signup-superior h2 {
-    padding-bottom: 0;
-}
-
-.spider-call {
-    align-self: center;
-    grid-column: 2/3;
-    grid-row: 1/3;
-    height: 150px;
-    width: 150px;
-}
-
 .signup-wrap {
     background-color: #ffffff;
     padding: 60px;

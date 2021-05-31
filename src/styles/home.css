@@ -1,0 +1,12 @@
+/** ESTILIZANDO COMPONENTES DA TELA INICIAL **/
+.comics-chars {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.home-comics,
+.home-characters {
+    background-color: #E4E4E4;
+}
