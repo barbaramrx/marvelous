@@ -3,9 +3,6 @@ import '../styles/loggedprofile.css'
 
 import Icons from '../components/icons.js'
 
-import { InlineIcon } from '@iconify/react';
-import bxsExit from '@iconify-icons/bx/bxs-exit';
-
 import UserService from '../app/service/userservice';
 import AuthService from '../app/service/authservice';
 
@@ -51,7 +48,7 @@ class LoggedProfile extends React.Component{
         return(
             <a href="#/" onClick={this.logout} className="dropdown-menu logged-user font-bebas">Olá, {this.state.name}!
                 <img src={this.getIcon(this.state.profile)} alt={this.state.teste} className="profile-picture"></img>
-                <InlineIcon href="#/login" icon={bxsExit} style={{color: '#ffffff', fontSize: '42px'}} className="exit" />
+                <span href="#/login" className="exit"></span>
             </a>
         )
     }
