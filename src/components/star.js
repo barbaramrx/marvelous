@@ -1,9 +1,6 @@
 import React from 'react'
 import '../styles/loggedprofile.css'
 
-import { Icon } from '@iconify/react';
-import bxsStar from '@iconify-icons/bx/bxs-star';
-
 import UserCharService from '../app/service/usercharservice';
 import UserComicService from '../app/service/usercomicservice';
 
@@ -127,7 +124,7 @@ class Star extends React.Component{
 
     render() {
         return(
-            <Icon icon={bxsStar} className="fav" style={{color: `${this.state.style}`, fontSize: '42px'}} onClick={e => {this.addFav(e)}}/>
+            <span className="fav-star" style={{color: `${this.state.style}`}} onClick={e => {this.addFav(e)}}/>
         )
     }
 }
