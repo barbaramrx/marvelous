@@ -11,7 +11,7 @@ import '../styles/filter.css'
 import '../styles/favorites.css'
 
 import { Icon } from '@iconify/react'
-import bxsEraser from '@iconify-icons/bx/bxs-eraser'
+import bxsEraser from '@iconify/icons-bx/bxs-eraser'
 
 import { successMsg } from '../components/toastr.js'
 

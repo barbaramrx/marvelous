@@ -5,6 +5,9 @@ import Navbar from '../components/navbar.js'
 import LoggedProfile from '../components/loggedprofile.js';
 import MarvelService from '../app/service/marvelservice.js'
 
+import { Icon } from '@iconify/react';
+import bxsSearchAlt2 from '@iconify/icons-bx/bxs-search-alt-2';
+
 import '../styles/lists.css'
 import '../styles/filter.css'
 
@@ -89,7 +92,7 @@ class Comics extends React.Component {
                     <span className="filter">
                         <input className="filter-input" type="text" placeholder="Faça a sua busca aqui!" onChange={e => this.setState({filter: e.target.value})} />
                         <button onClick={this.filter} className="filter-search">
-                            <span className="search-icon" style={{fontSize: '24px'}}></span>
+                            <Icon icon={bxsSearchAlt2} style={{fontSize: '24px'}} />
                         </button>
                     </span>
                 </div>
