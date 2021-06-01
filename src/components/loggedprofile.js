@@ -51,7 +51,7 @@ class LoggedProfile extends React.Component{
         return(
             <a href="#/" onClick={this.logout} className="dropdown-menu logged-user font-bebas">Olá, {this.state.name}!
                 <img src={this.getIcon(this.state.profile)} alt={this.state.teste} className="profile-picture"></img>
-                <InlineIcon href="#/login" icon={bxsExit} style={{color: '#ffffff', fontSize: '42px'}} className="exit" />
+                <InlineIcon href="#/" icon={bxsExit} style={{color: '#ffffff', fontSize: '42px'}} className="exit" />
             </a>
         )
     }

@@ -7,7 +7,7 @@ class Navbar extends React.Component{
         return(
             <header>
                 <div className="header-left">
-                    <a href="/#">
+                    <a href="#/home">
                         <img className="logo" src={marvelousLogo} alt="the Marvelous logo" />
                     </a>
                 </div>
