@@ -8,6 +8,13 @@
     column-gap: 3rem;
 }
 
+.fav-char-list,
+.fav-comic-list {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
 .fav-chars,
 .fav-comics {
     width: 80%;
@@ -36,6 +43,16 @@
 }
 
 .fav-item:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: #ED1D24;
+}
+
+.remove-fav {
+    font-size: 28px;
+}
+
+.remove-fav:hover {
     cursor: pointer;
     font-weight: bolder;
     color: #ED1D24;

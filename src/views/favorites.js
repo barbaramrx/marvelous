@@ -2,13 +2,18 @@ import React from 'react';
 import {withRouter} from 'react-router-dom'
 
 import Navbar from '../components/navbar.js'
-import LoggedProfile from '../components/loggedprofile.js';
-import UserComicService from '../app/service/usercomicservice.js';
-import UserCharService from '../app/service/usercharservice.js';
+import LoggedProfile from '../components/loggedprofile.js'
+import UserComicService from '../app/service/usercomicservice.js'
+import UserCharService from '../app/service/usercharservice.js'
 
 import '../styles/lists.css'
 import '../styles/filter.css'
 import '../styles/favorites.css'
+
+import { Icon } from '@iconify/react'
+import bxsEraser from '@iconify-icons/bx/bxs-eraser'
+
+import { successMsg } from '../components/toastr.js'
 
 class Favorites extends React.Component {
 
@@ -60,6 +65,33 @@ class Favorites extends React.Component {
             })
     }
 
+    removeCharacter = (charId) => {
+
+        const userId = this.getUserId()
+        
+        this.userCharService.deleteChar(userId, charId)
+            .then(response => {
+                successMsg("O character foi removido de sua lista de favoritos. Atualize a página.")
+            }).catch(err => {
+                console.log(err.response)
+            })
+
+
+    }
+
+    removeComic = (comicId) => {
+
+        const userId = this.getUserId()
+        
+        this.userComicService.deleteCom(userId, comicId)
+            .then(response => {
+                successMsg("A comic foi removida de sua lista de favoritos. Atualize a página.")
+            }).catch(err => {
+                console.log(err.response)
+            })
+
+    }
+
     render() {
         return(
             <div className="main">
@@ -85,6 +117,7 @@ class Favorites extends React.Component {
                                         <li className="fav-item" key="char.id" onClick={() => this.props.history.push({pathname: `/character/${char.id}`, state:{charId: char.id}})}>
                                             {char.name}
                                         </li>
+                                        <Icon className="remove-fav" icon={bxsEraser} onClick={() => this.removeCharacter(char.id)} />
                                     </>
                                 )
                             })}
@@ -99,6 +132,7 @@ class Favorites extends React.Component {
                                         <li className="fav-item" key="comic.id" onClick={() => this.props.history.push({pathname: `/comic/${comic.id}`, state:{comicId: comic.id}})}>
                                             {comic.name}
                                         </li>
+                                        <Icon className="remove-fav" icon={bxsEraser} onClick={() => this.removeComic(comic.id)} />
                                     </>
                                 )
                             })}

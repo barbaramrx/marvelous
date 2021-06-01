@@ -14,6 +14,10 @@ class UserCharService extends ApiService {
         return this.get(`${id}/favCharacters`)
     }
 
+    deleteChar(idUser, idChar) {
+        return this.delete(`/${idUser}/${idChar}/delete`)
+    }
+
 }
 
 export default UserCharService

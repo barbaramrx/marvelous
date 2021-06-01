@@ -13,6 +13,10 @@ class UserComicService extends ApiService {
     checkFav(id) {
         return this.get(`/${id}/favComics`)
     }
+
+    deleteCom(idUser, idComic) {
+        return this.delete(`/${idUser}/${idComic}/delete`)
+    }
 }
 
 export default UserComicService
