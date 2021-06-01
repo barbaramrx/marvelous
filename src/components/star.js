@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/loggedprofile.css'
 
 import { Icon } from '@iconify/react';
-import bxsStar from '@iconify-icons/bx/bxs-star';
+import bxsStar from '@iconify/icons-bx/bxs-star';
 
 import UserCharService from '../app/service/usercharservice';
 import UserComicService from '../app/service/usercomicservice';
