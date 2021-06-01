@@ -4,7 +4,7 @@ import '../styles/loggedprofile.css'
 import Icons from '../components/icons.js'
 
 import { InlineIcon } from '@iconify/react';
-import bxsExit from '@iconify/icons-bx/bxs-exit';
+import bxsExit from '../assets/icons/bxs-exit';
 
 import UserService from '../app/service/userservice';
 import AuthService from '../app/service/authservice';

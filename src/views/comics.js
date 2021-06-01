@@ -6,7 +6,7 @@ import LoggedProfile from '../components/loggedprofile.js';
 import MarvelService from '../app/service/marvelservice.js'
 
 import { Icon } from '@iconify/react';
-import bxsSearchAlt2 from '@iconify/icons-bx/bxs-search-alt-2';
+import bxsSearchAlt2 from '../assets/icons/bxs-search-alt-2';
 
 import '../styles/lists.css'
 import '../styles/filter.css'
