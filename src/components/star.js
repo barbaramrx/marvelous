@@ -127,7 +127,7 @@ class Star extends React.Component{
 
     render() {
         return(
-            <span className="fav-star" style={{color: `${this.state.style}`}} onClick={e => {this.addFav(e)}}/>
+            <Icon icon={bxsStar} className="fav" style={{color: `${this.state.style}`, fontSize: '42px'}} onClick={e => {this.addFav(e)}}/>
         )
     }
 }
