@@ -26,18 +26,15 @@
 }
 
 .exit {
-    background: url('https://api.iconify.design/bx:bxs-exit.svg') no-repeat center center / contain;
     color: '#ffffff';
     font-size: 42px;
 }
 
 .fav-star {
     color: rgb(87, 87, 87);
-    background: url('https://api.iconify.design/bx:bxs-star.svg') no-repeat center center / contain;
     font-size: 42px;
 }
 
 .search-icon {
-    background: url('https://api.iconify.design/bx:bxs-search-alt-2.svg') no-repeat center center / contain;
     font-size: 24px;
 }
