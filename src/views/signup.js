@@ -69,7 +69,7 @@ class Signup extends React.Component{
         this.service.save(user)
             .then(response => {
                 successMsg('Usuário cadastrado com sucesso! Faça seu login para acessar o sistema.')
-                this.props.history.push('/login')
+                this.props.history.push('/#')
             }).catch(err => {
                 errorMsg(err.response.data)
             })
