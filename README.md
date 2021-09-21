@@ -10,6 +10,7 @@ Deployed at https://the-marvelous-app.herokuapp.com/#/
 
 ## Install
 
+### `npm install --global yarn`
 ### `yarn install`
 
 ## Run

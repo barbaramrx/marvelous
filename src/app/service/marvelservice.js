@@ -1,5 +1,5 @@
-import ApiMarvel from '../apimarvel.js'
-import Key from './apikey.js'
+import ApiMarvel from '../apiMarvel.js'
+import Key from './apiKey.js'
 import md5 from 'md5'
 
 class MarvelService extends ApiMarvel {
